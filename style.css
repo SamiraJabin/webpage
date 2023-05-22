@@ -1,0 +1,59 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: darkslategrey;
+    text-align: center;
+    text-decoration: lightpink;
+    padding: 30px;
+    shape-outside: 10px;
+    display: grid;
+}
+h1{
+    text-align: center;
+    font-family: cursive ;
+    text-decoration-color: rgb(240, 193, 228);
+    position: relative;
+    font-size: 5VW;
+    color: black;
+    -webkit-text-stroke: 0.5vw rgb(63, 66, 65);
+}
+h1::before{
+    content: attr(data-text);
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: bisque;
+    -webkit-text-stroke: 0vw silver;
+    border-right: 2px snow;
+    overflow: hidden;
+    animation:animate 6s linear infinite ;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 90px;
+    
+}
+.tt{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.grid:hover{
+    background: rgb(180, 203, 245);
+}
